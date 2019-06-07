@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable space-before-function-paren */
 const express = require('express');
 const path = require('path');
 const Nightmare = require('nightmare');
@@ -49,7 +51,7 @@ describe('express', function() {
     .goto(url)
     .evaluate(() => document.querySelector('button.btn'))
     .end()
-    .then(button => {
+    .then((button) => {
       expect(button).to.not.be.null.and.to.not.be.undefined;
       expect(typeof button).to.equal('object');
     })
